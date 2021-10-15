@@ -44,8 +44,11 @@ RS.RenderStepped:Connect(function()
     end
     
     if Settings.Aimbot then -- Aimbot
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Zenlisku/Silent-AimV2/main/DaHood", true))()
-end)
+        for i,arrow in pairs(game:GetService("Workspace"):GetChildren()) do
+            if arrow.Name == "arrow" or arrow.Name == "crossbow_arrow" then
+                pcall(function()
+                    arrow:WaitForChild("Handle").Position = getclosestplayertomouse().Character.HumanoidRootPart.Position
+                end)
             end
         end
     end
