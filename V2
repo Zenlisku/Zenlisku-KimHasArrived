@@ -88,9 +88,6 @@ local MainTab = Window:AddTab("Main") do
     MainTab:AddToggle({Name = "VisCheck", Flag = "VisCheck"})
     MainTab:AddSlider({Name = "Aimbot Fov", Default = 50, Max = 500, Flag = "Size"})
     MainTab:AddToggle({Name = "Toggle Sprint", Flag = "Speed"})
-    MainTab:AddToggle({Name = "Instant Break", Flag = "InstantBreak"})
-    MainTab:AddText("To get out of invisibility, just reset.")
-    MainTab:AddButton({Name = "Invisibility", Callback = InvisPlayer})
 end
 local SettingsTab = Window:AddTab("Settings") do
     SettingsTab:AddText("Fov Circle Settings")
